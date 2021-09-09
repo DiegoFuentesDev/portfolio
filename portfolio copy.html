@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- para el documento -->
+    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@200&display=swap" rel="stylesheet">
+    <!-- para el boton -->
+    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@200&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Azeret Mono', monospace;
+            /* background: rgb(82,255,180);
+            background: radial-gradient(circle, rgba(82,255,180,1) 15%, rgba(1,160,255,1) 50%, rgba(6,28,255,1) 85%); */
+            overflow-x: hidden;
+        }
+
+        .wrapper {
+            width: 100vw;
+            height: 100vh;
+            background: rgb(3,217,92);
+            background: linear-gradient(0deg, rgba(3,217,92,1) 0%, rgba(0,30,84,1) 79%);
+            color: white;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 2em;
+            /* position: fixed;
+            top: 0;
+            width: 100%;
+            margin-top: -5px; */
+        }
+
+        .brand {
+            margin-top: -8px;
+        }
+
+        .brand span{
+            color:deeppink
+        }        
+
+        .menu {
+            display: flex;
+            width: 50%;
+            justify-content: space-around;
+        }
+
+        .menu a{
+            color: white;
+            text-decoration: none;
+            
+        }
+
+        .menu li{
+            list-style: none;
+            padding: 10px 20px;
+        }
+
+        .menu .active{
+            color: pink;
+            
+        }
+
+        .menu li:hover{
+            background-color:rgba(3,217,92,1);
+            border-radius: 10px;
+            transform: scale(.9);
+            transition: ease-in .3s;
+        }
+
+        .main {
+            margin: 0 auto;
+            width: 80vw;
+            height: 80vh;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+        }
+
+        .main img{
+            max-width: 350px;
+            border-radius: 100px;
+        }
+
+        .main img:hover {
+            transform: scale(.95);
+            transition: ease-in .2s;
+            border: 7px inset rgb(3,217,92);
+        }
+
+        h1 {
+            font-size: 3.2em;
+        }
+
+        .infocontent span{
+            color:deeppink
+        }
+
+        .downloadcv {
+            padding: 10px 20px;
+            background-color: rgb(255, 68, 168);
+            font-family: 'Poppins', sans-serif;
+            border: none;
+            border-radius: 15px;
+            margin-top: 10px;
+            cursor: pointer;
+            box-shadow: 3px 5px 8px 4px rgba(0,30,84, .5);
+        }
+
+        .downloadcv:hover{
+            transform: scale(.95);
+            box-shadow: 1.5px 2.5px 4px 2px rgba(0,30,84, .5);
+            background-color: rgb(243, 179, 213);
+        }
+
+        /* About me */
+        .wrapperaboutme{
+            background: rgb(12,0,84);
+            background: linear-gradient(0deg, rgba(12,0,84,1) 63%, rgba(3,217,92,1) 100%);
+            color: black;
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            width: 100vw;
+            height: 100vh;
+            align-items: center;
+        }
+
+        .wrapperaboutme img {
+            /* max-width: 600px; */
+            width: 100%;
+            grid-column: 1/5;
+        }
+
+        .aboutinfo {
+            grid-column: 5/10;
+            padding: 4em;
+        }
+
+        .aboutinfo h2 {
+            font-size: 2.1em;
+            color:white;
+        }
+
+        .divider {
+            height: 4px;
+            width: 90px;
+            background-color: rgba(3,217,92,1);
+            margin-top: 5px;
+            margin-bottom: 2em;
+        }
+
+        .aboutinfo p {
+            margin-bottom: 1em;
+            color: white;
+            text-align: justify;
+        }
+
+        /* porfolio */
+        .wrapperportfolio {
+            background: rgb(3,201,91);
+            background: linear-gradient(0deg, rgba(3,201,91,1) 57%, rgba(12,0,84,1) 100%);
+            width: 100vw;
+            height: 100vh;
+            /* display: flex;
+            flex-direction: column;
+            justify-content: center; */
+
+        }
+        
+        .divider-port {
+            height: 4px;
+            width: 90px;
+            background-color: rgba(12,0,84,1);
+            margin-top: 5px;
+            margin-bottom: 2em;
+        }
+
+        .portfolio-headings {
+            padding: 2.3em;
+            /* width: 100vw; */
+        }
+
+        .portfolio-headings h2 {
+            font-size: 2.1em;
+            color: white;
+        }
+
+        .wrapperportfolio .container {
+            /* width: 80vw;
+            height: 80vw; */
+            margin: 0 auto;
+            display: flex;
+            /* align-items: center; */
+            justify-content: center;
+        }
+
+        .card {
+            width: 300px;
+            background-color: #91ffad;
+        }
+
+        .cardimage {
+            width: 100%;
+            height: 150px;
+            background-image: url("https://cdn.pixabay.com/photo/2015/09/02/12/35/sword-918542_1280.jpg");
+            background-size:cover;
+        }
+
+        .cardtitle {
+            padding: 20px;
+        }
+
+        .projectlinks {
+            display: flex;
+            justify-content: space-evenly;             
+        }
+        .projectlinks a {
+            color: rgba(12,0,84,1);
+        }
+
+        .projectlinks i {
+            font-size: 1.6em;
+            margin-bottom: 3.5px;
+        }
+
+        .projectdetails {
+            /* padding: 3.8px;
+            width: 22vw; */
+            display: flex;
+            justify-content: center;
+            margin: 1em;
+        }
+
+        .card a {
+            text-decoration: none;
+            margin: 0 auto;
+        }
+
+    </style>
+    <title>Portfolio DFM</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <nav class="navbar">
+                <div class="brand">
+                    <h2>D<span>FM</span></h2>
+                </div>
+                <ul class="menu">
+                    <li ><a class="active" href="#">Home</a></li>
+                    <li><a href="#wrapperaboutme">About Me</a></li>
+                    <li><a href="#wrapperportfolio">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>                  
+                </ul>
+            </nav>
+        </header>
+        <!-- creacion del contenido de la pagina -->
+        <main class="main">
+            <div class="infocontent">
+                <h1>I´m <span>D</span>iego <span>F</span>uentes <span>M</span>orlet</h1> 
+                <p>
+                    I´m a Web Developer specialized in Front End
+                </p>
+                <a download href="#">
+                    <button class="downloadcv">Download CV</button>
+                </a>
+            </div>
+            <img src="perfil.png" alt="My Profile Photo">
+        </main>
+    </div>
+    
+    <div class="wrapperaboutme" id="wrapperaboutme">        
+        <img src="https://cdn.pixabay.com/photo/2015/08/05/01/07/tech-875480_1280.jpg" alt="My computer and my coffee">        
+        <div class="aboutinfo">
+            <h2>About Me</h2>
+            <div class="divider"></div>
+            <p>
+                I am 21 years old, I study IT at university and I am very excited to help you reach more customers and spread your message far and wide.
+            </p>
+            <a href="#" target="_blank">
+                <button class="downloadcv">Read More</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="wrapperportfolio" id="wrapperportfolio">
+        <div class="portfolio-headings">
+            <h2>My Portfolio</h2>
+            <div class="divider-port"></div>
+        </div>
+        <div class="container">
+            <div class="card">
+                <div class="cardimage">                    
+                </div>
+                <div class="cardtitle">
+                    <h2>Project Description</h2>
+                </div>
+                <div class="projectlinks">
+                    <a href="https://github.com/DiegoFuentesDev/biografia" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+
+                </div>
+                <a href="https://github.com/DiegoFuentesDev/biografia" target="_blank" rel="noopener noreferrer">
+                    <button class="projectdetails downloadcv">Project Details</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

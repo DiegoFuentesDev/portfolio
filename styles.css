@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Azeret Mono', monospace;
+    /* background: rgb(82,255,180);
+    background: radial-gradient(circle, rgba(82,255,180,1) 15%, rgba(1,160,255,1) 50%, rgba(6,28,255,1) 85%); */
+    overflow-x: hidden;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    background: rgb(3,217,92);
+    background: linear-gradient(0deg, rgba(3,217,92,1) 0%, rgba(0,30,84,1) 79%);
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+    /* position: fixed;
+    top: 0;
+    width: 100%;
+    margin-top: -5px; */
+}
+
+.brand {
+    margin-top: -8px;
+}
+
+.brand span{
+    color:deeppink
+}        
+
+.menu {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    
+}
+
+.menu li{
+    list-style: none;
+    padding: 10px 20px;
+}
+
+.menu .active{
+    color: pink;
+    
+}
+
+.menu li:hover{
+    background-color:rgba(3,217,92,1);
+    border-radius: 10px;
+    transform: scale(.9);
+    transition: ease-in .3s;
+}
+
+.main {
+    margin: 0 auto;
+    width: 80vw;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.main img{
+    max-width: 350px;
+    border-radius: 100px;
+}
+
+.main img:hover {
+    transform: scale(.95);
+    transition: ease-in .2s;
+    border: 7px inset rgb(3,217,92);
+}
+
+h1 {
+    font-size: 3.2em;
+}
+
+.infocontent span{
+    color:deeppink
+}
+
+.downloadcv {
+    padding: 10px 20px;
+    background-color: rgb(255, 68, 168);
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    border-radius: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    box-shadow: 3px 5px 8px 4px rgba(0,30,84, .5);
+}
+
+.downloadcv:hover{
+    transform: scale(.95);
+    box-shadow: 1.5px 2.5px 4px 2px rgba(0,30,84, .5);
+    background-color: rgb(243, 179, 213);
+}
+
+/* About me */
+.wrapperaboutme{
+    background: rgb(12,0,84);
+    background: linear-gradient(0deg, rgba(12,0,84,1) 63%, rgba(3,217,92,1) 100%);
+    color: black;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+}
+
+.wrapperaboutme img {
+    /* max-width: 600px; */
+    width: 100%;
+    grid-column: 1/5;
+}
+
+.aboutinfo {
+    grid-column: 5/10;
+    padding: 4em;
+}
+
+.aboutinfo h2 {
+    font-size: 2.1em;
+    color:white;
+}
+
+.divider {
+    height: 4px;
+    width: 90px;
+    background-color: rgba(3,217,92,1);
+    margin-top: 5px;
+    margin-bottom: 2em;
+}
+
+.aboutinfo p {
+    margin-bottom: 1em;
+    color: white;
+    text-align: justify;
+}
+
+/* porfolio */
+.wrapperportfolio {
+    background: rgb(3,201,91);
+    background: linear-gradient(0deg, rgba(3,201,91,1) 57%, rgba(12,0,84,1) 100%);
+    width: 100vw;
+    height: 100vh;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+
+}
+
+.divider-port {
+    height: 4px;
+    width: 90px;
+    background-color: rgba(12,0,84,1);
+    margin-top: 5px;
+    margin-bottom: 2em;
+}
+
+.portfolio-headings {
+    padding: 2.3em;
+    /* width: 100vw; */
+}
+
+.portfolio-headings h2 {
+    font-size: 2.1em;
+    color: white;
+}
+
+.wrapperportfolio .container {
+    /* width: 80vw;
+    height: 80vw; */
+    margin: 0 auto;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    background-color: #91ffad;
+}
+
+.cardimage {
+    width: 100%;
+    height: 150px;
+    background-image: url("https://cdn.pixabay.com/photo/2015/09/02/12/35/sword-918542_1280.jpg");
+    background-size:cover;
+}
+
+.cardtitle {
+    padding: 20px;
+}
+
+.projectlinks {
+    display: flex;
+    justify-content: space-evenly;             
+}
+.projectlinks a {
+    color: rgba(12,0,84,1);
+}
+
+.projectlinks i {
+    font-size: 1.6em;
+    margin-bottom: 3.5px;
+}
+
+.projectdetails {
+    /* padding: 3.8px;
+    width: 22vw; */
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+}
+
+.card a {
+    text-decoration: none;
+    margin: 0 auto;
+}
